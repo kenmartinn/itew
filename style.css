@@ -1,0 +1,287 @@
+@font-face {
+    font-family: helvetica;
+    src: url(fonts/Helvetica.ttf);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+/* Product*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    justify-content: flex-start; 
+}
+
+
+.new-arrivals-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #333;
+    text-transform: uppercase;
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+
+.product-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+}
+
+.product-image-wrapper {
+    position: relative;
+}
+
+
+.product-image-wrapper .default-image {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+
+.product-image-wrapper .hover-image {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;  
+    transition: opacity 0.3s ease;
+}
+
+
+.product-card:hover .default-image {
+    opacity: 0;  
+}
+
+.product-card:hover .hover-image {
+    opacity: 1;  
+}
+
+
+.card-body {
+    text-align: left;
+    padding: 10px;
+}
+
+.product-card-brand {
+    font-size: 13px;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+.product-card-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product-card-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Shop by Section */
+.new-arrivals-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #333;
+    text-transform: uppercase;
+    text-align: left; 
+    margin-bottom: 20px; 
+}
+
+
+.position-relative img {
+    object-fit: cover;
+    height: 400px; 
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.sport-label {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #333;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.sport-label:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Trending Section */
+.trending-section {
+    background-color: #ffffff;
+}
+
+.trending-text h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+.trending-text p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.trending-text .small-text {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.trending-text .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.trending-section img {
+    object-fit: cover;
+    height: auto;
+}
+
+/* member benefits section */
+
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.card-body.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6); 
+    transition: background 0.3s ease;
+    text-align: center;
+    opacity: 0; 
+}
+
+.card:hover .card-body.overlay {
+    opacity: 1; 
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+button {
+    font-size: 0.9rem;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+/* product */
+@media (max-width: 768px) {
+    .product-card img {
+        height: 200px; 
+    }
+
+    .product-card-title {
+        font-size: 13px;
+    }
+
+    .product-card-price {
+        font-size: 14px;
+    }
+}
+
+/* shop by */
+@media (max-width: 768px) {
+    .sport-label {
+        font-size: 1rem;
+        padding: 5px 15px;
+    }
+
+    .position-relative img {
+        height: 300px; /* Adjust for smaller screens */
+    }
+}
+
+/* Responsive Styling trendong */
+@media (max-width: 768px) {
+    .trending-text h1 {
+        font-size: 2rem;
+    }
+    .trending-text .btn {
+        font-size: 0.9rem;
+    }
+}
+
+/* member benefits */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-body.overlay {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+}
